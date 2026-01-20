@@ -66,7 +66,7 @@ $ git log --pretty=format:"%h - %an, %ar : %s"
 $ git log --pretty=format:"%h %s" --graph
          
 ```
-##Limiting Log Output
+## Limiting Log Output
 ```md
 $ git log -n / n = number
 
