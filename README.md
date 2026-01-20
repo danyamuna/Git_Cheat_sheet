@@ -55,6 +55,30 @@ $ git mv file_from file_to
 ## Viewing the Commit History
 ```md
 $ git log
+$ git log -p
+$ git log --stat
+$ git log --shortstat
+$ git log --name-status
+$ git log --abbrev-commit
+$ git log --relative-date
+$ git log --pretty=oneline
+$ git log --pretty=format:"%h - %an, %ar : %s"
+$ git log --pretty=format:"%h %s" --graph
+         
+```
+##Limiting Log Output
+```md
+$ git log -n / n = number
+
+$ git log --author "name"
+
+$ git log --commiter
+
+$ git log -S "function name"
+
+$ git log --grep "name of commit"
+
+$ git log --since =2.week
 ```
 
 
