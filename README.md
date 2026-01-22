@@ -89,6 +89,16 @@ $ git restore CONTRIBUTING.md
 ```
 
 ## Git With Remote
+```md
+$ git clone
+$ git remote -v
+$ git remote add pp
+$ git push pp master
+$ git fetch main
+$ git pull pp main
+$ git remote rename oldname newname      
+$ git remote remove newrem
+```
 
 
 
