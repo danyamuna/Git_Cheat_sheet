@@ -80,7 +80,15 @@ $ git log --grep "name of commit"
 
 $ git log --since =2.week
 ```
+##  Git restore
+```md
+$ git reset HEAD CONTRIBUTING.md
+$ git checkout -- CONTRIBUTING.md
+$ git restore --staged CONTRIBUTING.md
+$ git restore CONTRIBUTING.md
+```
 
+## Git With Remote
 
 
 
