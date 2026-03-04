@@ -64,6 +64,11 @@ $ git log --relative-date
 $ git log --pretty=oneline
 $ git log --pretty=format:"%h - %an, %ar : %s"
 $ git log --pretty=format:"%h %s" --graph
+$ git log --abbrev-commit --p  //
+
+$ git reflog // a log
+of where your HEAD and branch references have been for the last few months.
+$ git log -g master
          
 ```
 ## Limiting Log Output
@@ -100,6 +105,16 @@ $ git remote rename oldname newname
 $ git remote remove newrem
 ```
 
+$ git show ca82a6df
+$ git show HEAD@{5}
+$ git show master@{yesterday}
+Escaping braces in PowerShell
+When using PowerShell, braces like { and } are special characters and must be
+escaped. You can escape them with a backtick ` or put the commit reference in
+quotes:
+$ git show HEAD@{0} # will NOT work
+$ git show HEAD@`{0`} # OK
+$ git show "HEAD@{0}" # OK
 
 
 
