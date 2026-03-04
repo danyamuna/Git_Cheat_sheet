@@ -33,11 +33,14 @@ $ man git-<verb>
 $ git init
 $ git add file
 $ git commit -m "   "
+$ git ad -i
 ```
 ## Checking the Status of Your Files
 ```md
 $ git status
 $ git status -s
+
+
 ```
 ## To see what you’ve changed
 ```md
@@ -69,7 +72,14 @@ $ git log --abbrev-commit --p  //
 $ git reflog // a log
 of where your HEAD and branch references have been for the last few months.
 $ git log -g master
-         
+Commit Ranges
+-“all commits reachable from experiment that aren’t reachable from master.”
+$ git log master..new-branch
+
+shows you which side of the range each commit is in
+$ git log --left-right master...experiment
+
+      
 ```
 ## Limiting Log Output
 ```md
@@ -105,6 +115,8 @@ $ git remote rename oldname newname
 $ git remote remove newrem
 ```
 
+## Git show
+```md
 $ git show ca82a6df
 $ git show HEAD@{5}
 $ git show master@{yesterday}
@@ -116,5 +128,32 @@ $ git show HEAD@{0} # will NOT work
 $ git show HEAD@`{0`} # OK
 $ git show "HEAD@{0}" # OK
 
+see the previous commit
+$ git show HEAD^
+-On Windows in cmd.exe, ^ is a special character and needs to be treated differently.
+You can either double it or put the commit reference in quotes:
+$ git show HEAD^ # will NOT work on Windows
+$ git show HEAD^^ # OK
+$ git show "HEAD^" # OK
+- This also refers to the first parent
+$ git show HEAD~3
+-This can also be written HEAD~~~, which again is the first parent of the first parent of the first parent:
+$ git show HEAD~~~
+
+```
+
+## Git Stash And Clean
+```md
+$ git stash
+$ git stash list
+$ git stash apply stash@{2}
+$ git stash apply --index
+$ git stash drop stash@{0}
+$ git stash --keep-index
+$ git stash -u //untraked file
+$ git clean -d -n
+$ git clean -d -n -x //delet output file .o
+$ git clean -f -d
+```
 
 
