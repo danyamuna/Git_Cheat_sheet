@@ -156,4 +156,18 @@ $ git clean -d -n -x //delet output file .o
 $ git clean -f -d
 ```
 
+## gpg key / GNU Privacy Guard
+```md
+$ gpg --gen-key
+$ gpg --lis-tkey
+$ git config --global user.signingkey 0A46826A
+$ git tag -s v1.5 -m 'my signed 1.5 tag
+$ git show v1.5
+$ git tag -v v1.4
+$ git commit -a -S -m 'Signed commit'
+$ git log --show-signature -1
+$ git log --pretty="format:%h %G? %aN %s"
+$ git merge --verify-signatures non-verify
+$ git config --local commit.gpgsign true 
+```
 
